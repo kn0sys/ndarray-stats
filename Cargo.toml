@@ -1,5 +1,5 @@
 [package]
-name = "ndarray-stats"
+name = "kn0sys-ndarray-stats"
 version = "0.7.0"
 authors = ["Jim Turner <ndarray-stats@turner.link>", "LukeMathWalker <rust@lpalmieri.com>", "n12n"]
 edition = "2021"

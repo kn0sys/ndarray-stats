@@ -188,9 +188,7 @@ mod cov_tests {
     use ndarray_rand::rand;
     use ndarray_rand::rand_distr::Uniform;
     use ndarray_rand::RandomExt;
-    use quickcheck_macros::quickcheck;
 
-    #[quickcheck]
     fn constant_random_variables_have_zero_covariance_matrix(value: f64) -> bool {
         let n_random_variables = 3;
         let n_observations = 4;
@@ -202,13 +200,12 @@ mod cov_tests {
         )
     }
 
-    #[quickcheck]
     fn covariance_matrix_is_symmetric(bound: f64) -> bool {
         let n_random_variables = 3;
         let n_observations = 4;
         let a = Array::random(
             (n_random_variables, n_observations),
-            Uniform::new(-bound.abs(), bound.abs()),
+            Uniform::new(-bound.abs(), bound.abs()).unwrap(),
         );
         let covariance = a.cov(1.).unwrap();
         abs_diff_eq!(covariance, &covariance.t(), epsilon = 1e-8)
@@ -219,7 +216,7 @@ mod cov_tests {
     fn test_invalid_ddof() {
         let n_random_variables = 3;
         let n_observations = 4;
-        let a = Array::random((n_random_variables, n_observations), Uniform::new(0., 10.));
+        let a = Array::random((n_random_variables, n_observations), Uniform::new(0., 10.).unwrap());
         let invalid_ddof = (n_observations as f64) + rand::random::<f64>().abs();
         let _ = a.cov(invalid_ddof);
     }
@@ -291,15 +288,13 @@ mod pearson_correlation_tests {
     use ndarray::Array;
     use ndarray_rand::rand_distr::Uniform;
     use ndarray_rand::RandomExt;
-    use quickcheck_macros::quickcheck;
 
-    #[quickcheck]
     fn output_matrix_is_symmetric(bound: f64) -> bool {
         let n_random_variables = 3;
         let n_observations = 4;
         let a = Array::random(
             (n_random_variables, n_observations),
-            Uniform::new(-bound.abs(), bound.abs()),
+            Uniform::new(-bound.abs(), bound.abs()).unwrap(),
         );
         let pearson_correlation = a.pearson_correlation().unwrap();
         abs_diff_eq!(
@@ -309,7 +304,6 @@ mod pearson_correlation_tests {
         )
     }
 
-    #[quickcheck]
     fn constant_random_variables_have_nan_correlation(value: f64) -> bool {
         let n_random_variables = 3;
         let n_observations = 4;

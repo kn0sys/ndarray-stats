@@ -1,9 +1,9 @@
 # ndarray-stats
 
-[![Coverage](https://codecov.io/gh/rust-ndarray/ndarray-stats/branch/master/graph/badge.svg)](https://codecov.io/gh/rust-ndarray/ndarray-stats)
-[![Dependencies status](https://deps.rs/repo/github/rust-ndarray/ndarray-stats/status.svg)](https://deps.rs/repo/github/rust-ndarray/ndarray-stats)
-[![Crate](https://img.shields.io/crates/v/ndarray-stats.svg)](https://crates.io/crates/ndarray-stats)
-[![Documentation](https://docs.rs/ndarray-stats/badge.svg)](https://docs.rs/ndarray-stats)
+[![Coverage](https://codecov.io/gh/rust-ndarray/ndarray-stats/branch/master/graph/badge.svg)](https://codecov.io/gh/kn0sys/ndarray-stats)
+[![Dependencies status](https://deps.rs/repo/github/rust-ndarray/kn0sys-ndarray-stats/status.svg)](https://deps.rs/repo/github/kn0sys/ndarray-stats)
+[![Crate](https://img.shields.io/crates/v/ndarray-stats.svg)](https://crates.io/crates/kn0sys-ndarray-stats)
+[![Documentation](https://docs.rs/ndarray-stats/badge.svg)](https://docs.rs/kn0sys-ndarray-stats)
 
 This crate provides statistical methods for [`ndarray`]'s `ArrayBase` type.
 
@@ -16,21 +16,26 @@ Currently available routines include:
 - deviation functions (distances, counts, errors, etc.);
 - histogram computation.
 
-See the [documentation](https://docs.rs/ndarray-stats) for more information.
+See the [documentation](https://docs.rs/kn0sys-ndarray-stats) for more information.
 
-Please feel free to contribute new functionality! A roadmap can be found [here](https://github.com/rust-ndarray/ndarray-stats/issues/1).
 
-[`ndarray`]: https://github.com/rust-ndarray/ndarray
+[`ndarray`]: https://github.com/kn0sys/ndarray
 
 ## Using with Cargo
 
 ```toml
 [dependencies]
-ndarray = "0.16"
-ndarray-stats = "0.6.0"
+ndarray = { package = "kn0sys_ndarray", version = "0.17.0" }
+ndarray-stats = "0.7.0"
 ```
 
 ## Releases
+
+* **0.7.0**
+
+  * Breaking Changes
+    * Update rand to `rand:v0.9.0`
+    * removed quickcheck
 
 * **0.6.0**
 
@@ -131,7 +136,7 @@ Please feel free to create issues and submit PRs.
 
 ## License
 
-Copyright 2018–2024 `ndarray-stats` developers
+Copyright 2018–2025 `ndarray-stats` developers
 
 Licensed under the [Apache License, Version 2.0](LICENSE-APACHE), or the [MIT
 license](LICENSE-MIT), at your option. You may not use this project except in

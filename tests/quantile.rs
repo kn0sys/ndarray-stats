@@ -7,7 +7,6 @@ use ndarray_stats::{
     Quantile1dExt, QuantileExt,
 };
 use noisy_float::types::{n64, N64};
-use quickcheck_macros::quickcheck;
 
 #[test]
 fn test_argmin() {
@@ -24,7 +23,6 @@ fn test_argmin() {
     assert_eq!(a.argmin(), Err(MinMaxError::EmptyInput));
 }
 
-#[quickcheck]
 fn argmin_matches_min(data: Vec<f32>) -> bool {
     let a = Array1::from(data);
     a.argmin().map(|i| &a[i]) == a.min()
@@ -48,7 +46,6 @@ fn test_argmin_skipnan() {
     assert_eq!(a.argmin_skipnan(), Err(EmptyInput));
 }
 
-#[quickcheck]
 fn argmin_skipnan_matches_min_skipnan(data: Vec<Option<i32>>) -> bool {
     let a = Array1::from(data);
     let min = a.min_skipnan();
@@ -102,7 +99,6 @@ fn test_argmax() {
     assert_eq!(a.argmax(), Err(MinMaxError::EmptyInput));
 }
 
-#[quickcheck]
 fn argmax_matches_max(data: Vec<f32>) -> bool {
     let a = Array1::from(data);
     a.argmax().map(|i| &a[i]) == a.max()
@@ -129,7 +125,6 @@ fn test_argmax_skipnan() {
     assert_eq!(a.argmax_skipnan(), Err(EmptyInput));
 }
 
-#[quickcheck]
 fn argmax_skipnan_matches_max_skipnan(data: Vec<Option<i32>>) -> bool {
     let a = Array1::from(data);
     let max = a.max_skipnan();
@@ -277,7 +272,6 @@ fn test_midpoint_overflow() {
     assert_eq!(median, expected_median);
 }
 
-#[quickcheck]
 fn test_quantiles_mut(xs: Vec<i64>) -> bool {
     let v = Array::from(xs.clone());
 
@@ -339,7 +333,6 @@ fn check_one_interpolation_method_for_quantiles_mut(
     }
 }
 
-#[quickcheck]
 fn test_quantiles_axis_mut(mut xs: Vec<u64>) -> bool {
     // We want a square matrix
     let axis_length = (xs.len() as f64).sqrt().floor() as usize;

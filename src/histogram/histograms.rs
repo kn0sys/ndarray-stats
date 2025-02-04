@@ -43,7 +43,7 @@ impl<A: Ord> Histogram<A> {
     ///     [0, 1],
     /// ];
     /// assert_eq!(histogram_matrix, expected.into_dyn());
-    /// # Ok::<(), Box<std::error::Error>>(())
+    /// # Ok::<(), Box<dyn std::error::Error>>(())
     /// ```
     pub fn add_observation<S>(&mut self, observation: &ArrayBase<S, Ix1>) -> Result<(), BinNotFound>
     where

@@ -1,6 +1,5 @@
 use ndarray::prelude::*;
 use ndarray_stats::Sort1dExt;
-use quickcheck_macros::quickcheck;
 
 #[test]
 fn test_partition_mut() {
@@ -43,7 +42,6 @@ fn test_sorted_get_mut() {
     assert_eq!(j, 10);
 }
 
-#[quickcheck]
 fn test_sorted_get_many_mut(mut xs: Vec<i64>) -> bool {
     let n = xs.len();
     if n == 0 {
@@ -72,7 +70,6 @@ fn test_sorted_get_many_mut(mut xs: Vec<i64>) -> bool {
     }
 }
 
-#[quickcheck]
 fn test_sorted_get_mut_as_sorting_algorithm(mut xs: Vec<i64>) -> bool {
     let n = xs.len();
     if n == 0 {

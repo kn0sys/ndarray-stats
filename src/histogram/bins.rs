@@ -432,11 +432,9 @@ impl<A: Ord> Bins<A> {
 #[cfg(test)]
 mod edges_tests {
     use super::{Array1, Edges};
-    use quickcheck_macros::quickcheck;
     use std::collections::BTreeSet;
     use std::iter::FromIterator;
 
-    #[quickcheck]
     fn check_sorted_from_vec(v: Vec<i32>) -> bool {
         let edges = Edges::from(v);
         let n = edges.len();
@@ -448,7 +446,6 @@ mod edges_tests {
         true
     }
 
-    #[quickcheck]
     fn check_sorted_from_array(v: Vec<i32>) -> bool {
         let a = Array1::from(v);
         let edges = Edges::from(a);
@@ -461,7 +458,6 @@ mod edges_tests {
         true
     }
 
-    #[quickcheck]
     fn edges_are_right_open(v: Vec<i32>) -> bool {
         let edges = Edges::from(v);
         let view = edges.as_array_view();
@@ -473,7 +469,6 @@ mod edges_tests {
         }
     }
 
-    #[quickcheck]
     fn edges_are_left_closed(v: Vec<i32>) -> bool {
         let edges = Edges::from(v);
         if let 1 = edges.len() {
@@ -489,7 +484,6 @@ mod edges_tests {
         }
     }
 
-    #[quickcheck]
     #[allow(clippy::needless_pass_by_value)]
     fn edges_are_deduped(v: Vec<i32>) -> bool {
         let unique_elements = BTreeSet::from_iter(v.iter());

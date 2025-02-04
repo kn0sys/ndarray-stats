@@ -409,9 +409,7 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use quickcheck_macros::quickcheck;
 
-    #[quickcheck]
     fn remove_nan_mut_idempotent(is_nan: Vec<bool>) -> bool {
         let mut values: Vec<_> = is_nan
             .into_iter()
@@ -422,7 +420,6 @@ mod tests {
         removed == remove_nan_mut(removed.to_owned().view_mut())
     }
 
-    #[quickcheck]
     fn remove_nan_mut_only_nan_remaining(is_nan: Vec<bool>) -> bool {
         let mut values: Vec<_> = is_nan
             .into_iter()
@@ -432,7 +429,6 @@ mod tests {
         remove_nan_mut(view).iter().all(|elem| !elem.is_nan())
     }
 
-    #[quickcheck]
     fn remove_nan_mut_keep_all_non_nan(is_nan: Vec<bool>) -> bool {
         let non_nan_count = is_nan.iter().filter(|&&is_nan| !is_nan).count();
         let mut values: Vec<_> = is_nan

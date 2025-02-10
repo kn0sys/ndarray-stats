@@ -1,5 +1,5 @@
-use ndarray_stats::errors::{MultiInputError, ShapeMismatch};
-use ndarray_stats::DeviationExt;
+use kn0sys_ndarray_stats::errors::{MultiInputError, ShapeMismatch};
+use kn0sys_ndarray_stats::DeviationExt;
 
 use approx::assert_abs_diff_eq;
 use ndarray::{array, Array1};

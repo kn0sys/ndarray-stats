@@ -11,7 +11,7 @@ use std::ops::{Index, Range};
 /// # Examples
 ///
 /// ```
-/// use ndarray_stats::histogram::{Bins, Edges};
+/// use kn0sys_ndarray_stats::histogram::{Bins, Edges};
 /// use noisy_float::types::n64;
 ///
 /// let unit_edges = Edges::from(vec![n64(0.), n64(1.)]);
@@ -51,7 +51,7 @@ impl<A: Ord> From<Vec<A>> for Edges<A> {
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     ///
     /// let edges = Edges::from(array![1, 15, 10, 10, 20]);
     /// // The array gets sorted!
@@ -88,7 +88,7 @@ impl<A: Ord + Clone> From<Array1<A>> for Edges<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     ///
     /// let edges = Edges::from(vec![1, 15, 10, 20]);
     /// // The vec gets sorted!
@@ -118,7 +118,7 @@ impl<A: Ord> Index<usize> for Edges<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     ///
     /// let edges = Edges::from(vec![1, 5, 10, 20]);
     /// assert_eq!(
@@ -137,7 +137,7 @@ impl<A: Ord> Edges<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     /// use noisy_float::types::n64;
     ///
     /// let edges = Edges::from(vec![n64(0.), n64(1.), n64(3.)]);
@@ -156,7 +156,7 @@ impl<A: Ord> Edges<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     /// use noisy_float::types::{N64, n64};
     ///
     /// let edges = Edges::<N64>::from(vec![]);
@@ -176,7 +176,7 @@ impl<A: Ord> Edges<A> {
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     ///
     /// let edges = Edges::from(vec![0, 5, 3]);
     /// assert_eq!(
@@ -200,7 +200,7 @@ impl<A: Ord> Edges<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::Edges;
+    /// use kn0sys_ndarray_stats::histogram::Edges;
     ///
     /// let edges = Edges::from(vec![0, 2, 3]);
     /// // `1` is in the interval [0, 2), whose indices are (0, 1)
@@ -241,7 +241,7 @@ impl<A: Ord> Edges<A> {
 /// # Examples
 ///
 /// ```
-/// use ndarray_stats::histogram::{Edges, Bins};
+/// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
 /// use noisy_float::types::n64;
 ///
 /// let edges = Edges::from(vec![n64(0.), n64(1.), n64(2.)]);
@@ -277,7 +277,7 @@ impl<A: Ord> Bins<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     /// use noisy_float::types::n64;
     ///
     /// let edges = Edges::from(vec![n64(0.), n64(1.), n64(2.)]);
@@ -300,7 +300,7 @@ impl<A: Ord> Bins<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     /// use noisy_float::types::{N64, n64};
     ///
     /// // At least 2 edges is needed to represent 1 interval
@@ -329,7 +329,7 @@ impl<A: Ord> Bins<A> {
     /// Basic usage:
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     ///
     /// let edges = Edges::from(vec![0, 2, 4, 6]);
     /// let bins = Bins::new(edges);
@@ -350,7 +350,7 @@ impl<A: Ord> Bins<A> {
     /// the value:
     ///
     /// ```
-    /// # use ndarray_stats::histogram::{Edges, Bins};
+    /// # use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     /// # let edges = Edges::from(vec![0, 2, 4, 6]);
     /// # let bins = Bins::new(edges);
     /// # let value = 1;
@@ -369,7 +369,7 @@ impl<A: Ord> Bins<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     ///
     /// let edges = Edges::from(vec![0, 2, 4, 6]);
     /// let bins = Bins::new(edges);
@@ -404,7 +404,7 @@ impl<A: Ord> Bins<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins};
     ///
     /// let edges = Edges::from(vec![1, 5, 10, 20]);
     /// let bins = Bins::new(edges);

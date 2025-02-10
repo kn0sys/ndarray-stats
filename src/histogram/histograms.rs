@@ -25,7 +25,7 @@ impl<A: Ord> Histogram<A> {
     /// # Example:
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::histogram::{Edges, Bins, Histogram, Grid};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins, Histogram, Grid};
     /// use noisy_float::types::n64;
     ///
     /// let edges = Edges::from(vec![n64(-1.), n64(0.), n64(1.)]);
@@ -99,7 +99,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::{
+    /// use kn0sys_ndarray_stats::{
     ///     HistogramExt,
     ///     histogram::{
     ///         Histogram, Grid, GridBuilder,

@@ -30,7 +30,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::QuantileExt;
+    /// use kn0sys_ndarray_stats::QuantileExt;
     ///
     /// let a = array![[1., 3., 5.],
     ///                [2., 0., 6.]];
@@ -53,7 +53,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::QuantileExt;
+    /// use kn0sys_ndarray_stats::QuantileExt;
     ///
     /// let a = array![[::std::f64::NAN, 3., 5.],
     ///                [2., 0., 6.]];
@@ -109,7 +109,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::QuantileExt;
+    /// use kn0sys_ndarray_stats::QuantileExt;
     ///
     /// let a = array![[1., 3., 7.],
     ///                [2., 5., 6.]];
@@ -132,7 +132,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::QuantileExt;
+    /// use kn0sys_ndarray_stats::QuantileExt;
     ///
     /// let a = array![[::std::f64::NAN, 3., 5.],
     ///                [2., 0., 6.]];
@@ -238,7 +238,7 @@ where
     ///
     /// ```rust
     /// use ndarray::{array, aview1, Axis};
-    /// use ndarray_stats::{QuantileExt, interpolate::Nearest};
+    /// use kn0sys_ndarray_stats::{QuantileExt, interpolate::Nearest};
     /// use noisy_float::types::n64;
     ///
     /// let mut data = array![[3, 4, 5], [6, 7, 8]];

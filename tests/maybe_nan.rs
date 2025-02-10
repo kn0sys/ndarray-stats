@@ -1,5 +1,5 @@
 use ndarray::prelude::*;
-use ndarray_stats::MaybeNan;
+use kn0sys_ndarray_stats::MaybeNan;
 use noisy_float::types::{n64, N64};
 
 #[test]

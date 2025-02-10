@@ -1,5 +1,5 @@
 use ndarray::prelude::*;
-use ndarray_stats::Sort1dExt;
+use kn0sys_ndarray_stats::Sort1dExt;
 
 #[test]
 fn test_partition_mut() {

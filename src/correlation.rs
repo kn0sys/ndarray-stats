@@ -51,7 +51,7 @@ where
     ///
     /// ```
     /// use ndarray::{aview2, arr2};
-    /// use ndarray_stats::CorrelationExt;
+    /// use kn0sys_ndarray_stats::CorrelationExt;
     ///
     /// let a = arr2(&[[1., 3., 5.],
     ///                [2., 4., 6.]]);
@@ -101,7 +101,7 @@ where
     /// ```
     /// use approx;
     /// use ndarray::arr2;
-    /// use ndarray_stats::CorrelationExt;
+    /// use kn0sys_ndarray_stats::CorrelationExt;
     /// use approx::AbsDiffEq;
     ///
     /// let a = arr2(&[[1., 3., 5.],

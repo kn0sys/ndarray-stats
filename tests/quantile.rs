@@ -1,7 +1,7 @@
 use itertools::izip;
 use ndarray::array;
 use ndarray::prelude::*;
-use ndarray_stats::{
+use kn0sys_ndarray_stats::{
     errors::{EmptyInput, MinMaxError, QuantileError},
     interpolate::{Higher, Interpolate, Linear, Lower, Midpoint, Nearest},
     Quantile1dExt, QuantileExt,

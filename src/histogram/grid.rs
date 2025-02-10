@@ -62,7 +62,7 @@ use std::ops::Range;
 ///
 /// ```
 /// use ndarray::{Array, array};
-/// use ndarray_stats::{
+/// use kn0sys_ndarray_stats::{
 ///     histogram::{strategies::Auto, Bins, Edges, Grid, GridBuilder},
 ///     HistogramExt,
 /// };
@@ -112,7 +112,7 @@ impl<A: Ord> Grid<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     ///
     /// let edges = Edges::from(vec![0, 1]);
     /// let bins = Bins::new(edges);
@@ -130,7 +130,7 @@ impl<A: Ord> Grid<A> {
     /// # Examples
     ///
     /// ```
-    /// use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     ///
     /// let edges_x = Edges::from(vec![0, 1]);
     /// let edges_y = Edges::from(vec![-1, 0, 1]);
@@ -166,7 +166,7 @@ impl<A: Ord> Grid<A> {
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     /// use noisy_float::types::n64;
     ///
     /// let edges = Edges::from(vec![n64(-1.), n64(0.), n64(1.)]);
@@ -189,7 +189,7 @@ impl<A: Ord> Grid<A> {
     ///
     /// ```should_panic
     /// # use ndarray::array;
-    /// # use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// # use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     /// # use noisy_float::types::n64;
     /// # let edges = Edges::from(vec![n64(-1.), n64(0.), n64(1.)]);
     /// # let bins = Bins::new(edges);
@@ -237,7 +237,7 @@ impl<A: Ord + Clone> Grid<A> {
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     ///
     /// let edges_x = Edges::from(vec![0, 1]);
     /// let edges_y = Edges::from(vec![2, 3, 4]);
@@ -256,7 +256,7 @@ impl<A: Ord + Clone> Grid<A> {
     ///
     /// ```should_panic
     /// # use ndarray::array;
-    /// # use ndarray_stats::histogram::{Edges, Bins, Grid};
+    /// # use kn0sys_ndarray_stats::histogram::{Edges, Bins, Grid};
     /// # let edges_x = Edges::from(vec![0, 1]);
     /// # let edges_y = Edges::from(vec![2, 3, 4]);
     /// # let bins_x = Bins::new(edges_x);
@@ -292,7 +292,7 @@ impl<A: Ord + Clone> Grid<A> {
 ///
 /// ```
 /// use ndarray::Array;
-/// use ndarray_stats::histogram::{strategies::Auto, Bins, Edges, Grid, GridBuilder};
+/// use kn0sys_ndarray_stats::histogram::{strategies::Auto, Bins, Edges, Grid, GridBuilder};
 ///
 /// // 1-dimensional observations, as a (n_observations, n_dimension) 2-d matrix
 /// let observations = Array::from_shape_vec(

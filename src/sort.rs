@@ -74,7 +74,7 @@ where
     ///
     /// ```
     /// use ndarray::array;
-    /// use ndarray_stats::Sort1dExt;
+    /// use kn0sys_ndarray_stats::Sort1dExt;
     ///
     /// let mut data = array![3, 1, 4, 5, 2];
     /// let pivot_index = 2;

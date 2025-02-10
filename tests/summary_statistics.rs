@@ -1,8 +1,8 @@
-use approx::{abs_diff_eq, assert_abs_diff_eq};
+use approx::{assert_abs_diff_eq};
 use ndarray::{arr0, array, Array, Array1, Array2, Axis};
 use ndarray_rand::rand_distr::Uniform;
 use ndarray_rand::RandomExt;
-use ndarray_stats::{
+use kn0sys_ndarray_stats::{
     errors::{EmptyInput, MultiInputError, ShapeMismatch},
     SummaryStatisticsExt,
 };

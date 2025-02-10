@@ -4,7 +4,7 @@ version = "0.7.1"
 authors = ["Jim Turner <ndarray-stats@turner.link>", "LukeMathWalker <rust@lpalmieri.com>", "n12n"]
 edition = "2021"
 
-license = "MIT/Apache-2.0"
+license = "MIT OR Apache-2.0"
 
 repository = "https://github.com/kn0sys/ndarray-stats"
 documentation = "https://docs.rs/kn0sys-ndarray-stats/"
